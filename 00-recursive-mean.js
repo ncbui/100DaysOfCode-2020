@@ -25,9 +25,7 @@ class LinkedList {
   averageRecursive() {
     if (!this.length) return 0;   
 
-    let head = this.head;
-
-    return this._recursion(head);
+    return this._recursion(this.head);
   }
 
   _recursion(head) {
@@ -35,6 +33,7 @@ class LinkedList {
 
     return (head.val / this.length) + this._recursion(head.next);
   }
+  
 
   /** average(): return an average of all values in the list */
 
