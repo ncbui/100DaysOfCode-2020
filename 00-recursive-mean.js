@@ -20,10 +20,10 @@ class LinkedList {
     for (let val of vals) this.push(val);
   }
 
-  /** meanRecursive(): return an mean of all values in a linked list*/
+  /** meanRecursive(): return the mean of all values in a linked list*/
 
   meanRecursive() {
-    if (!this.length) return 0;   
+    if (!this.length) return 0;
 
     return this._recursion(this.head);
   }
@@ -33,7 +33,7 @@ class LinkedList {
 
     return (head.val / this.length) + this._recursion(head.next);
   }
-  
+
 
   /** mean(): return an mean of all values in the list */
 
@@ -47,7 +47,7 @@ class LinkedList {
       sum += currentNode.val;
       currentNode = currentNode.next;
     }
-    
+
     return sum / this.length;
     // runtime: O(n), where n = items in list
   }
@@ -58,13 +58,13 @@ class LinkedList {
     let newNode = new Node(val);
     if (this.tail === null) {
       // if list is empty, add first node
-      this.head = newNode;      
+      this.head = newNode;
       this.tail = newNode;
     } else {
       this.tail.next = newNode; // adds node to existing tail
       this.tail = newNode;      // sets tail to newest node
     }
-    
+
     this.length++;
     // runtime: O(n), has to traverse to all nodes to reach end
   }
