@@ -2,32 +2,32 @@ const LinkedList = require("./00-recursive-mean");
 
 const values = [8, 6, 7, 5, 3, 0, 9];
 
-describe("average", function () {
-  it("calculates the average of items in a list", function () {
+describe("mean", function () {
+  it("calculates the mean of items in a list", function () {
     let lst = new LinkedList(values);
-    expect(lst.average()).toBeCloseTo(5.4286, 4);
+    expect(lst.mean()).toBeCloseTo(5.4286, 4);
   });
 
   it("returns 0 for empty lists", function () {
     let lst = new LinkedList();
-    expect(lst.average()).toBe(0);
+    expect(lst.mean()).toBe(0);
   });
 });
 
 describe("averageRecursive", function () {
-  it("calculates the average of items in a list", function () {
+  it("calculates the mean of items in a list", function () {
     let lst = new LinkedList(values);
-    expect(lst.averageRecursive()).toBeCloseTo(5.4286, 4);
+    expect(lst.meanRecursive()).toBeCloseTo(5.4286, 4);
   });
 
-    it("matches sum returned with average()", function () {
+    it("matches sum returned with mean()", function () {
     let lst = new LinkedList(values);
-    expect(lst.averageRecursive() === lst.average()).toBe(true);
+    expect(lst.meanRecursive() === lst.mean()).toBe(true);
   });
 
   it("returns 0 for empty lists", function () {
     let lst = new LinkedList();
-    expect(lst.averageRecursive()).toBe(0);
+    expect(lst.meanRecursive()).toBe(0);
   });
 });
 
