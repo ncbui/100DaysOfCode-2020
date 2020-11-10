@@ -14,7 +14,7 @@ describe("mean", function () {
   });
 });
 
-describe("averageRecursive", function () {
+describe("meanRecursive", function () {
   it("calculates the mean of items in a list", function () {
     let lst = new LinkedList(values);
     expect(lst.meanRecursive()).toBeCloseTo(5.4286, 4);
