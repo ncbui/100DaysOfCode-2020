@@ -1,3 +1,3 @@
 # 100DaysOfCode-2020
 
-1. [Recursive mean in singly linked lists](00-recursive-mean.js)
+1. [Linked Lists - recursive mean](00-recursive-mean.js)
